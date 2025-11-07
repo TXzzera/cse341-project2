@@ -1,12 +1,19 @@
-import express, { Router } from 'express';
+const express =  require ('express');
+const routes = require ('./routes/index.js');
+const mongodb =  require ('./data/database.js');
+
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+app.use('/', routes);
 
-app.use('/', require('./routes') );
+mongodb.initDb((err) => {
+  if (err) {
+    console.log(err);
+  }
+  else{
+    app.listen(process.env.PORT || 3000, () => {
+    console.log('Database is running on port ' + (process.env.PORT || 3000));});
+  }});
+  
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log('Server is running on port ' + (process.env.PORT || 3000));
-});
+
