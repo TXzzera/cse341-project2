@@ -2,10 +2,7 @@ const mongodb = require('../data/database');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req,res) =>{
-<<<<<<< HEAD
     //#swagger.tags = ['Users']
-=======
->>>>>>> b20e15aeaccdf4af451f8443150f44783547048e
     const result = await mongodb.getDatabase().db().collection('users').find();
     result.toArray().then((users)=>{
         res.setHeader('Content-Type','application/json');
@@ -14,10 +11,7 @@ const getAll = async (req,res) =>{
 };
 
 const getSingle = async (req,res) =>{
-<<<<<<< HEAD
     //#swagger.tags = ['Users']
-=======
->>>>>>> b20e15aeaccdf4af451f8443150f44783547048e
     const userId = new ObjectId(req.params.id);
     const result = await mongodb.getDatabase().db().collection('users').find({_id:userId});
     result.toArray().then((users)=>{
@@ -26,7 +20,6 @@ const getSingle = async (req,res) =>{
     });
 };
 
-<<<<<<< HEAD
 /* In these 3 new functions below, I didn't accessed the database directly. It abilitates the reuse 
 of the functions in other parts of the application, if needed in the future.*/
 
@@ -102,9 +95,4 @@ module.exports = {
     userCreate,
     userUpdate,
     userDelete
-=======
-module.exports = {
-    getAll,
-    getSingle,
->>>>>>> b20e15aeaccdf4af451f8443150f44783547048e
 };

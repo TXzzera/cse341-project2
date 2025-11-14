@@ -26,7 +26,6 @@ const getDatabase = () => {
     } return database;
 };
 
-<<<<<<< HEAD
 const insertOne = async (collectionName, data) => {
     const db = getDatabase();
     return await db.db().collection(collectionName).insertOne(data);
@@ -48,9 +47,4 @@ module.exports = {
     insertOne,
     updateOne,
     deleteOne
-=======
-module.exports = {
-    initDb,
-    getDatabase,
->>>>>>> b20e15aeaccdf4af451f8443150f44783547048e
 };

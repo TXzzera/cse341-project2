@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/TXzzera/cse-341-project1#readme",
   "dependencies": {
-<<<<<<< HEAD
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
@@ -26,11 +25,5 @@
     "nodemon": "^3.1.10",
     "swagger-autogen": "^2.23.7",
     "swagger-ui-express": "^5.0.1"
-=======
-    "dotenv": "^17.2.3",
-    "express": "^5.1.0",
-    "mongodb": "^6.20.0",
-    "nodemon": "^3.1.10"
->>>>>>> b20e15aeaccdf4af451f8443150f44783547048e
   }
 }
