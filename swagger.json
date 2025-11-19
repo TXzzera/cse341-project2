@@ -5,10 +5,10 @@
     "description": "API for accessing contacts informations",
     "version": "1.0.0"
   },
-  "host": "localhost:8082",
+  "host": "project1-uwm3.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
