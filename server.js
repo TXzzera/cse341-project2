@@ -18,13 +18,17 @@ app.use((req,res,next) => {
 });
 app.use('/', routes);
 
+process.on('uncaughtException', (err, origin) => {
+  console.error(process.stderr.fd, `Caught exception: ${err}\n` + `Exception origin: ${origin}`);
+});
+
 mongodb.initDb((err) => {
   if (err) {
     console.log(err);
   }
   else{
-    app.listen(process.env.PORT || 3000, () => {
-    console.log('Database is running on port ' + (process.env.PORT || 3000));});
+    app.listen(process.env.PORT || 8082, () => {
+    console.log('Database is running on port ' + (process.env.PORT || 8082));});
   }});
   
 
