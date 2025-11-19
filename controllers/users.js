@@ -67,7 +67,7 @@ const userCreate = async (req,res) =>{
             data: newUser
         });
     } catch (err) {
-        res.status(500).json({message: 'Creating a user failed!'
+        res.status(500).json({message: 'Creating a user failed! Internal Error.'
         });
     }
 }
@@ -94,9 +94,9 @@ const userUpdate = async (req, res) => {
             data: updatedUser
         });
     } else {
-        res.status(404).json({message: 'User not found!'});
+        res.status(400).json({message: 'User not found!'});
     } } catch (err) {
-        res.status(500).json({message: 'Updating user failed!'});
+        res.status(500).json({message: 'Updating user failed! Internal Error.'});
 }};
 
 const userDelete = async (req, res) => {
@@ -109,7 +109,7 @@ const userDelete = async (req, res) => {
         if (result.deletedCount > 0) {
             res.status(200).json({message: 'User deleted successfully'});
         } else {
-            res.status(404).json({message: 'User not found!'});
+            res.status(400).json({message: 'User not found!'});
         } } catch (err) {
         res.status(500).json({message: 'Deleting user failed!'});
 }};
