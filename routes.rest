@@ -30,3 +30,37 @@ Content-Type: application/json
 
 ###Delete a user by ID
 DELETE http://localhost:8082/users/690c0026b8421f8b93d511d0 
+
+
+###Get all cars
+GET http://localhost:8082/cars
+
+###Get a single car by ID
+GET http://localhost:8082/cars/691df0dbe5fcf3198901dd01
+
+###Create a new car
+POST http://localhost:8082/cars
+Content-Type: application/json
+
+{   
+   "brand":"Chevrolet",
+   "model":"Corsa",
+   "year": 2005,
+   "color":"Black",
+   "transmission":"Automatic"
+}
+
+###Update an existing car by ID
+PUT http://localhost:8082/cars/691e2c55cf954941f6059ddc
+Content-Type: application/json
+
+{   
+   "brand":"Chevrolet",
+   "model":"Corsa",
+   "year": 2005,
+   "color":"Black",
+   "transmission":"Automatic"
+}
+
+###Delete a car by ID
+DELETE http://localhost:8082/cars/691e2c55cf954941f6059ddc
