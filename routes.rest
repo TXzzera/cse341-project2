@@ -42,24 +42,24 @@ GET http://localhost:8082/cars/691df0dbe5fcf3198901dd01
 POST http://localhost:8082/cars
 Content-Type: application/json
 
-{   
-   "brand":"Chevrolet",
-   "model":"Corsa",
-   "year": 2005,
-   "color":"Black",
-   "transmission":"Automatic"
+{
+"brand":"any",
+"model":"any",
+"year":2024,
+"color":"any",
+"transmission":"any"
 }
 
 ###Update an existing car by ID
 PUT http://localhost:8082/cars/691e2c55cf954941f6059ddc
 Content-Type: application/json
 
-{   
-   "brand":"Chevrolet",
-   "model":"Corsa",
-   "year": 2005,
-   "color":"Black",
-   "transmission":"Automatic"
+{
+"brand":"Volks",
+"model":"Fox",
+"year":2000,
+"color":"any",
+"transmission":"any"
 }
 
 ###Delete a car by ID

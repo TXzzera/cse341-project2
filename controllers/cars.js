@@ -76,7 +76,7 @@ const carCreate = async (req,res) =>{
 
 const carUpdate = async (req, res) => {
     //#swagger.tags = ['Cars']
-    const CarId = new ObjectId(req.params.id);
+    const carId = new ObjectId(req.params.id);
     const updatedCar = {
         brand: req.body.brand,
         model: req.body.model,
@@ -86,12 +86,12 @@ const carUpdate = async (req, res) => {
     };
 
     try {
-        const query = {_id: CarId};
+        const query = {_id: carId};
         const updateData = {$set: updatedCar};
         const result = await mongodb.updateOne('cars', query, updateData);
 
         if (result.modifiedCount > 0) {
-        res.status(200).json({
+          res.status(200).json({
             message: 'Car updated successfully',
             data: updatedCar
         });
