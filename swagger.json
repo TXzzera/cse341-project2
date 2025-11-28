@@ -20,6 +20,14 @@
   "schemes": [
     "https"
   ],
+  "securityDefinitions": {
+    "githubAuth": {
+      "type": "oauth2",
+      "authorizationUrl": "https://cse341-project2-f8lg.onrender.com/login",
+      "flow": "implicit",
+      "scopes": {}
+    }
+  },
   "paths": {
     "/login": {
       "get": {
@@ -74,6 +82,11 @@
           "Users"
         ],
         "description": "",
+        "security": [
+          {
+            "githubAuth": []
+          }
+        ],
         "parameters": [
           {
             "name": "body",
@@ -150,6 +163,11 @@
           "Users"
         ],
         "description": "",
+        "security": [
+          {
+            "githubAuth": []
+          }
+        ],
         "parameters": [
           {
             "name": "id",
@@ -202,6 +220,11 @@
           "Users"
         ],
         "description": "",
+        "security": [
+          {
+            "githubAuth": []
+          }
+        ],
         "parameters": [
           {
             "name": "id",
@@ -249,6 +272,11 @@
           "Cars"
         ],
         "description": "",
+        "security": [
+          {
+            "githubAuth": []
+          }
+        ],
         "parameters": [
           {
             "name": "body",
@@ -325,6 +353,11 @@
           "Cars"
         ],
         "description": "",
+        "security": [
+          {
+            "githubAuth": []
+          }
+        ],
         "parameters": [
           {
             "name": "id",
@@ -377,6 +410,11 @@
           "Cars"
         ],
         "description": "",
+        "security": [
+          {
+            "githubAuth": []
+          }
+        ],
         "parameters": [
           {
             "name": "id",
