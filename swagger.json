@@ -5,7 +5,7 @@
     "description": "API for accessing users and cars informations",
     "version": "1.0.0"
   },
-  "host": "localhost:8082",
+  "host": "cse341-project2-f8lg.onrender.com",
   "basePath": "/",
   "tags": [
     {
@@ -18,7 +18,7 @@
     }
   ],
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/login": {
