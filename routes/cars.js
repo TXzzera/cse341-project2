@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 const carsController = require('../controllers/cars');
-const validateCar = require('../middlewares/carValidate');
+
+const {isAuthenticated} = require('../middlewares/auth');
 
 router.get('/', 
     //#swagger.tags = ['Cars']
@@ -12,12 +13,12 @@ router.get('/:id',
     carsController.getSingle);
 router.post('/', 
     //#swagger.tags = ['Cars']
-    validateCar.saveCar, carsController.carCreate);
+    isAuthenticated, carsController.carCreate);
 router.put('/:id', 
     //#swagger.tags = ['Cars']
-    validateCar.saveCar, carsController.carUpdate);
+    isAuthenticated, carsController.carUpdate);
 router.delete('/:id', 
     //#swagger.tags = ['Cars']
-    carsController.carDelete);
+    isAuthenticated,carsController.carDelete);
 
 module.exports = router;

@@ -5,8 +5,8 @@ const doc = {
         title: 'Users and Cars List API',
         description: 'API for accessing users and cars informations',
     },
-    host: 'cse341-project2-f8lg.onrender.com/api-docs/',
-    schemes: ['https'],
+    host: 'localhost:8082',
+    schemes: ['http'],
     tags: [
     { name: 'Users', description: 'Manipulate informations of the users' },
     { name: 'Cars', description: 'Modify informations of the cars' },]
